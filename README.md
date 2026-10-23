@@ -4,6 +4,10 @@
 
 The owner approved a **public source repository** so GitHub Pages can run on the free plan. Pages serves the password-encrypted demonstration from `docs/`; it uses dummy products and browser storage, not the real database. Supabase sign-in and shared data are not connected yet. **Start with [CURSOR-HANDOFF.md](CURSOR-HANDOFF.md)** for setup at home and the exact integration work remaining.
 
+Presentation: https://mitchellpel.github.io/osk-website/
+
+The password is supplied separately, never committed. Use the Admin button after unlocking to demonstrate products, inventory, orders and activity. Use dummy contact information. The **Lock preview** button reloads the encrypted page and asks for the password again.
+
 `npm run dev:partner` runs the portable presentation locally. `npm run build:partner` requires `STATICRYPT_PASSWORD` (20+ characters) and produces `dist-partner/encrypted/index.html`. Deploy only the encrypted file, never its plaintext counterpart. Keep the password out of Git.
 
 Owner-only staging prototype for OSK temporary 3D-printed KTM 300 EXC emergency lever kits. The logo is derived from the supplied OSK vector PDF. The hero photo is a generated generic rider image, not a product or fitment claim.
@@ -32,7 +36,7 @@ The Supabase key transfer was blocked by automatic security review, so these set
 
 ## Local demo
 
-Loopback previews automatically use a separate browser-only demo store with three dummy products and a sample order. Prices and stock are examples; fitment is unverified. Admin edits, checkout drafts, tracking and simulated payments persist in that browser. No Supabase or Yoco request is sent in this mode. Hosted sites always use server routes.
+Loopback previews and the explicit static partner presentation use a separate browser-only demo store with three dummy products and a sample order. Prices and stock are examples; fitment is unverified. Admin edits, checkout drafts, tracking and simulated payments persist in that browser. No Supabase or Yoco request is sent in this mode. Other hosted server builds use server routes.
 
 ## Local work
 
